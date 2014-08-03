@@ -25,7 +25,6 @@ class ItemsController < ApplicationController
   # POST /items.json
   def create
     @item = Item.new(item_params)
-    binding.pry
     if @item.save
       render json: @item.to_json
     else
