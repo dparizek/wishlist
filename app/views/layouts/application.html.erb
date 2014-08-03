@@ -2,12 +2,13 @@
 <html>
 <head>
   <title>Wishlist</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div>
+  <div id="auth-banner">
   <% if current_user %>
     Signed in as <strong><%= current_user.name %></strong>!
     <%= link_to "Sign out", signout_path, id: "sign_out" %>
@@ -16,11 +17,19 @@
   <% end %>
   </div>
   <h1><%= image_tag "wishlist.jpg" %></h1>
-  <div class="container">
+
+  <div>
+    <form>
+      <input type="image_url" name="image_url" placeholder="IMAGE URL">
+      <input type="url" name="url" placeholder="LINK TO ITEM URL">
+      <button>Add</button>
+    </form>
+  </div>
+  <div class="container" id="container">
 
   <%= yield %>
 
   </div><!-- container -->
-
+<%= javascript_include_tag 'application' %>
 </body>
 </html>
