@@ -21,7 +21,7 @@
 var msnry = new Masonry( "#msnry-container", {
   // options
   "columnWidth": 60,
-  "isOriginTop": false,
+  "isFitWidth": true,
   "itemSelector": '.item'
 });
 
