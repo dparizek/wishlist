@@ -9,7 +9,7 @@ I built Wishlist as a way to easily track favorite products from the web in a cl
 * Ruby 2.1.1
 * Rails 4.1.1
 * PostgreSQL Database
-* Google Authentication using [OmniAuth Google OAuth2 Strategy](https://github.com/zquestz/omniauth-google-oauth2 "OmniAuth Google OAuth2 Strategy")
+* Google Authentication using [OmniAuth Google OAuth2 Strategy](https://github.com/zquestz/omniauth-google-oauth2 "OmniAuth Google OAuth2 Strategy") & [Figaro gem](https://github.com/laserlemon/figaro "Figaro gem")
 * [Backbone.js](http://backbonejs.org/ "Backbone.js") for JavaScript framework
 * [Masonry.js](http://masonry.desandro.com/ "Masonry.js") for  JavaScript grid layout library
 * [Skeleton](http://www.getskeleton.com/ "Skeleton") for Responsive CSS Framework
