@@ -16,14 +16,14 @@ I built Wishlist as a way to easily track favorite products from the web in a cl
 * [Google Chrome Extension API's](https://developer.chrome.com/extensions/api_index "Google Chrome Extension API's")
 
 ##User Stories Completed
+### Web Application
 * User can log in via Google authentication
 * User can manually add item using fields for title, image URL, and webpage URL
 * User can see a list of their items (masonry.js)
 * User can see sharp-looking single page app (backbone.js)
 * User can hover over image to see details
 * User can delete items from their wishlist
-
----
+### Chrome Extension
 * User must be logged in to use extension
 * User can download chrome extension from store to add images/items directly to wishlist from page
 * User can click on chrome extension to highlight all images on page and select choice to be added to wishlist
