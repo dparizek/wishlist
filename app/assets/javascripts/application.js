@@ -12,10 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
+//= require backbone
+//= require masonry
 //= require_tree .
 
 
-var msnry = new Masonry( "#container", {
+var msnry = new Masonry( "#msnry-container", {
   // options
   columnWidth: 60,
   isFitWidth: true,
