@@ -2,7 +2,11 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
-    @items = Item.all
+    if current_user
+      @items = Item.where(user_id: current_user.id)
+    else
+      @items = []
+    end
     respond_to do |format|
       format.html { render :index }
       format.json { render json: @items }
@@ -11,7 +15,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-
+    @item.user_id = current_user.id
     if @item.save
       render json: @item.to_json
     else
