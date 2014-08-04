@@ -34,6 +34,6 @@ I built Wishlist as a way to easily track favorite products from the web in a cl
 A full list of user stories can be found by looking at [this Pivotal Tracker](https://www.pivotaltracker.com/s/projects/1119660 "Pivotal Tracker"). This project is a work in progress, and I'll be chipping away at that icebox!
 
 ##Production
-Explore Wishlist for yourself on [Heroku](http://w1shlist.herokuapp.com/)
+Explore Wishlist for yourself with [Heroku](http://w1shlist.herokuapp.com/) and the [Chrome Extension](https://chrome.google.com/webstore/detail/lopficaepgghcelaeifkmgpcfhfdlkik "Wishlist Chrome Extension")
 
 
