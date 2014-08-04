@@ -20,8 +20,9 @@
 
 var msnry = new Masonry( "#msnry-container", {
   // options
-  columnWidth: 60,
-  itemSelector: '.item'
+  "columnWidth": 60,
+  "isOriginTop": false,
+  "itemSelector": '.item'
 });
 
 $(".item").click(function(){
