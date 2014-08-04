@@ -98,9 +98,18 @@ span.text-content {
 span.text-content .title {
   display:block;
   font-weight:bold;
-  margin-top: 60px;
+  margin-top: 50px;
   text-align: center;
   vertical-align: middle;
+}
+
+span.text-content a {
+  color:white;
+  text-decoration: none;
+}
+
+span.text-content a:hover{
+  text-decoration: underline;
 }
 
 .item:hover span.text-content {

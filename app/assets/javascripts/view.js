@@ -53,10 +53,12 @@ var FormView = Backbone.View.extend({
     evt.preventDefault();
     var image_url = this.$('[name ="image_url"]').val();
     var url = this.$('[name ="url"]').val();
+    var title = this.$('[name = "title"]').val();
     this.el.reset();
     this.collection.create({
       image_url: image_url,
-      url: url
+      url: url,
+      title: title
     });
 
   }
