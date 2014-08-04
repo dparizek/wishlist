@@ -2,7 +2,7 @@
 
 ##Overview
 
-I build Wishlist as a way to easily track favorite products from the web in a clean & simple way. Products can be added manually through web app or by using the [Wishlist Chrome Extension](https://chrome.google.com/webstore/detail/lopficaepgghcelaeifkmgpcfhfdlkik "Wishlist Chrome Extension").
+I built Wishlist as a way to easily track favorite products from the web in a clean & simple way. Products can be added manually through the web app or by using the [Wishlist chrome extension](https://chrome.google.com/webstore/detail/lopficaepgghcelaeifkmgpcfhfdlkik "Wishlist Chrome Extension").
 
 
 ##Technologies Used
@@ -10,9 +10,9 @@ I build Wishlist as a way to easily track favorite products from the web in a cl
 * Rails 4.1.1
 * PostgreSQL Database
 * Google Authentication using [OmniAuth Google OAuth2 Strategy](https://github.com/zquestz/omniauth-google-oauth2 "OmniAuth Google OAuth2 Strategy")
-* [Backbone.js](http://backbonejs.org/ "Backbone.js"): JavaScript framework (with dependency on [Underscore.js](http://underscorejs.org/ "Underscore.js"))
-* [Masonry.js](http://masonry.desandro.com/ "Masonry.js"):  JavaScript grid layout library
-* [Skeleton](http://www.getskeleton.com/ "Skeleton"): Responsive CSS Framework
+* [Backbone.js](http://backbonejs.org/ "Backbone.js") for JavaScript framework
+* [Masonry.js](http://masonry.desandro.com/ "Masonry.js") for  JavaScript grid layout library
+* [Skeleton](http://www.getskeleton.com/ "Skeleton") for Responsive CSS Framework
 * [Google Chrome Extension API's](https://developer.chrome.com/extensions/api_index "Google Chrome Extension API's")
 
 ##User Stories Completed
@@ -22,7 +22,7 @@ I build Wishlist as a way to easily track favorite products from the web in a cl
 * User can see sharp-looking single page app (backbone.js)
 * User can hover over image to see details
 * User can delete items from their wishlist
-
+---
 * User must be logged in to use extension
 * User can download chrome extension from store to add images/items directly to wishlist from page
 * User can click on chrome extension to highlight all images on page and select choice to be added to wishlist
