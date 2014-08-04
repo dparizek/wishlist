@@ -19,14 +19,16 @@
   </div>
   <h1><%= image_tag "wishlist.jpg" %></h1>
 
-  <div>
+  <div id="form">
     <form>
       <input type="title" name="title" placeholder="TITLE">
       <input type="image_url" name="image_url" placeholder="IMAGE URL">
       <input type="url" name="url" placeholder="LINK TO ITEM URL">
       <button>Add</button>
     </form>
+    <p>Download our <a href="https://chrome.google.com/webstore/detail/lopficaepgghcelaeifkmgpcfhfdlkik/" target=_blank>Chrome Extension</a> to add items on the go!</p>
   </div>
+
   <div class="container" id="container">
     <div id="msnry-container">
   <%= yield %>
