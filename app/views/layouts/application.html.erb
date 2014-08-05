@@ -9,27 +9,8 @@
   <meta name="google-site-verification" content="z9YScH4wdPzDjAg2M0z1O1ZSdHRKU7wcnPwQl_jmNSU" />
 </head>
 <body>
-  <div id="auth-banner">
-  <% if current_user %>
-    Signed in as <strong><%= current_user.name %></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
-  <% end %>
-  </div>
+
   <h1><%= image_tag "wishlist.jpg" %></h1>
-
-  <div id="form">
-    <form>
-      <input type="title" name="title" placeholder="TITLE">
-      <input type="image_url" name="image_url" placeholder="IMAGE URL">
-      <input type="url" name="url" placeholder="LINK TO ITEM URL">
-      <button>Add</button>
-    </form>
-    <p>Download our <a href="https://chrome.google.com/webstore/detail/lopficaepgghcelaeifkmgpcfhfdlkik/" target=_blank>Chrome Extension</a> to add items on the go!</p>
-  </div>
-
-  <div class="container" id="container">
 
   <%= yield %>
 

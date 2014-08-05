@@ -18,19 +18,6 @@
 //= require imagesloaded
 //= require_tree .
 
-// var container = document.querySelector('#container');
-// var msnry;
-// // initialize Masonry after all images have loaded
-// imagesLoaded( container, function() {
-//   msnry = new Masonry( container, {
-//     // options
-//   "columnWidth":100,
-//   // "gutter": 10,
-//   "isFitWidth":true,
-//   "itemSelector": '.item'
-//   } );
-// });
-
 var msnry = new Masonry( "#container", {
   // options
   // "columnWidth":100,
@@ -39,7 +26,21 @@ var msnry = new Masonry( "#container", {
 });
 
 
-$(".item").click(function(){
+$(".item").on("click", function(){
    window.open($(this).find("a").attr("href"));
    return false;
 });
+
+$(".hide").on("click", function() {
+  $("#form p").addClass("visuallyhidden");
+});
+
+// $(".public").on("click", function() {
+//   $(".private").toggleClass("visuallyhidden");
+//   $(".public").toggleClass("visuallyhidden");
+// });
+
+// $(".private").on("click",function() {
+//   $(".private").toggleClass("visuallyhidden");
+//   $(".public").toggleClass("visuallyhidden");
+// });

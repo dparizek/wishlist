@@ -1,7 +1,35 @@
- <script type="template" id="item-html">
-    <div class="item">
+<div id="auth-banner">
+  <% if current_user %>
+    Signed in as <strong><%= current_user.name %></strong>!
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  <% else %>
+    <%= link_to "Sign in with Google", "/auth/google_oauth2", id: "sign_in" %>
+    <p>Don't have a Google Account? Use Local Storage.</p>
+  <% end %>
+</div>
+<div id="share-link">
+  <p><a href="/<%= current_user.uid %>" target=_blank >Click here for shareable version!</a></p>
+</div>
 
-      <img src="<%%= item.get('image_url') %>" onload="this.width/=2.5;this.onload=null;">
-      <span class="text-content"><span class="remove">&#x2715;</span><span class="title"><a href="<%%= item.get('url') %>"><%%= item.get('title') %></a></span><span class="date">Wished for on <%%= item.get('created_at').substring(5,10).split("-").join("/") + "/" + item.get('created_at').substring(0,4) %></span></span>
-    </div>
-  </script>
+
+<div id="form">
+  <form>
+    <input type="title" name="title" placeholder="TITLE">
+    <input type="image_url" name="image_url" placeholder="IMAGE URL">
+    <input type="url" name="url" placeholder="LINK TO ITEM URL">
+    <button>Add</button>
+  </form>
+  <p><span class="hide">&#x2715;</span> Download our <a href="https://chrome.google.com/webstore/detail/lopficaepgghcelaeifkmgpcfhfdlkik/" target=_blank>Chrome Extension</a> to add items on the go!</p>
+</div>
+
+<div class="container" id="container">
+
+<script type="template" id="item-html">
+  <div class="item">
+
+    <img src="<%%= item.get('image_url') %>" onload="this.width/=2.5;this.onload=null;">
+    <span class="text-content"><span class="remove">&#x2715;</span> <span class="private visuallyhidden">Priv</span><span class="public">Pub</span><span class="title"><a href="<%%= item.get('url') %>"><%%= item.get('title') %></a></span><span class="date">Wished for on <%%= item.get('created_at').substring(5,10).split("-").join("/") + "/" + item.get('created_at').substring(0,4) %></span></span>
+  </div>
+</script>
+
+</div>

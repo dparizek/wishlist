@@ -58,6 +58,24 @@ h1 img {
   width: 700px;
 }
 
+#auth-banner {
+  position:absolute;
+  top:0;
+}
+
+#share-link {
+  position:absolute;
+  top: 20px;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: -40px;
+  margin-bottom: 40px;
+  text-align:center;
+}
+
+
 form {
   margin-top: -20px;
   text-align: center;
@@ -74,7 +92,19 @@ form input {
   text-align:center;
 }
 
+.hide {
+  font-size:12px;
+}
+
 .item {
+  border: 3px black solid;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 3px;
+  position:relative;
+}
+
+.item-wrapper {
   border: 3px black solid;
   border-radius: 5px;
   display: inline-block;

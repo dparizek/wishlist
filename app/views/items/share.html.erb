@@ -1,0 +1,10 @@
+<h2>for<br><%= @user.name %></h1>
+
+<% @items.each do |item| %>
+<div class="item-wrapper">
+  <div class="item">
+    <img src="<%= item.image_url %>" onload="this.width/=2.5;this.onload=null;">
+    <span class="text-content"><span class="title"><a href="<%= item.url %>"><%= item.title %></a></span><span class="date">Wished for on <%= item.created_at.to_s[5..10].split("-").join("/") + "/" + item.created_at.to_s[0..3] %></span></span>
+  </div>
+</div>
+<% end %>
