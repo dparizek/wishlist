@@ -15,14 +15,29 @@
 //= require underscore
 //= require backbone
 //= require masonry
+//= require imagesloaded
 //= require_tree .
 
+// var container = document.querySelector('#container');
+// var msnry;
+// // initialize Masonry after all images have loaded
+// imagesLoaded( container, function() {
+//   msnry = new Masonry( container, {
+//     // options
+//   "columnWidth":100,
+//   // "gutter": 10,
+//   "isFitWidth":true,
+//   "itemSelector": '.item'
+//   } );
+// });
 
-var msnry = new Masonry( "#msnry-container", {
+var msnry = new Masonry( "#container", {
   // options
-  "columnWidth": 60,
+  // "columnWidth":100,
+  "isFitWidth":true,
   "itemSelector": '.item'
 });
+
 
 $(".item").click(function(){
    window.open($(this).find("a").attr("href"));
