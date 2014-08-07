@@ -33,7 +33,7 @@ var ListView = Backbone.View.extend({
 
   initialize: function() {
     this.listenTo(this.collection, 'add', this.addOne);
-    this.listenTo(this.collection, 'change sync', this.render)
+    this.listenTo(this.collection, 'change sync reset', this.render)
     this.render();
   },
 
