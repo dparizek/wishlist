@@ -32,8 +32,8 @@ class ItemsController < ApplicationController
   end
 
   def share
-    @user = User.where(uid: params[:user_uid])[0]
-    @items = Item.where(user_id: @user.id)
+    @owner = User.where(uid: params[:user_uid])[0]
+    @items = Item.where(user_id: @owner.id)
   end
 
   private

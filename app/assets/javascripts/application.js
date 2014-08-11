@@ -15,7 +15,6 @@
 //= require underscore
 //= require backbone
 //= require masonry
-//= require imagesloaded
 //= require_tree .
 
 var msnry = new Masonry( "#container", {
