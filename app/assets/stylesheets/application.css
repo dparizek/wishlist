@@ -48,6 +48,10 @@ body {
   width:100%;
 }
 
+#extension {
+  margin-bottom:0;
+  text-align:center;
+}
 
 h1 {
   margin:0;
@@ -59,8 +63,9 @@ h1 img {
 }
 
 #auth-banner {
+  font-size:15px;
   position:absolute;
-  top:0;
+  top:10px;
 }
 
 h2 {
@@ -105,6 +110,20 @@ form input {
   display: inline-block;
   padding: 3px;
   position:relative;
+}
+
+#share-link {
+  font-size:20px;
+  position: absolute;
+  top:5px;
+}
+
+#share-link p {
+  margin-bottom:5px;
+}
+
+#share-link input {
+  font-size:20px;
 }
 
 

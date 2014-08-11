@@ -1,3 +1,9 @@
+<% if @user = current_user %>
+  <div id="share-link">
+    <p><a href="mailto: ?subject=Check out my wishlist!&body=Check out my wishlist!%0A%0Ahttp://w1shlist.herokuapp.com/<%= @user.uid %>" target=_blank>Share this wishlist!</a></p>
+  </div>
+<% end %>
+
 <h2>for<br><%= @user.name %></h1>
 
 <% @items.each do |item| %>
