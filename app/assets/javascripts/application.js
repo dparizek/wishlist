@@ -32,7 +32,7 @@ $(".item").on("click", function(){
 });
 
 $(".hide").on("click", function() {
-  $("#form p").addClass("visuallyhidden");
+  $("#extension").addClass("visuallyhidden");
 });
 
 // $(".public").on("click", function() {
