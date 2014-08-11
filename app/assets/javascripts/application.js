@@ -19,7 +19,7 @@
 
 var msnry = new Masonry( "#container", {
   // options
-  // "columnWidth":100,
+  // "columnWidth":1,
   "isFitWidth":true,
   "itemSelector": '.item'
 });
