@@ -60,7 +60,8 @@ var FormView = Backbone.View.extend({
     this.collection.create({
       image_url: image_url,
       url: url,
-      title: title
+      title: title,
+      created_at: new Date()
     });
 
   }

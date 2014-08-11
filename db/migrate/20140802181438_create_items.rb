@@ -4,9 +4,7 @@ class CreateItems < ActiveRecord::Migration
       t.text :image_url
       t.string :title
       t.text :url
-      t.string :timestamps
-
-      t.timestamps
+      t.string :created_at
     end
   end
 end

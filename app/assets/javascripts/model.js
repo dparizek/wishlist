@@ -2,7 +2,8 @@ var Item = Backbone.Model.extend({
   defaults: {
     title: '',
     img_url: '',
-    url: ''
+    url: '',
+    created_at: ''
   }
 });
 
