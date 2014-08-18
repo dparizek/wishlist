@@ -1,3 +1,5 @@
+var masonry;
+
 var ItemView = Backbone.View.extend({
   tagName: 'div',
 
@@ -12,11 +14,18 @@ var ItemView = Backbone.View.extend({
 
   // only listens to DOM
   events: {
-    'click .remove' : 'onRemove'
+    'click .remove' : 'onRemove',
+    'click .lock': 'togglePrivacy'
   },
 
   onRemove: function() {
     this.model.destroy();
+  },
+
+  togglePrivacy: function() {
+    this.model.set({'is_private?':!(this.model.get('is_private?'))});
+    console.log(this.model.get('is_private?'));
+    this.render();
   },
 
   template: _.template($('#item-html').html()),
@@ -32,9 +41,22 @@ var ListView = Backbone.View.extend({
   el: '#container',
 
   initialize: function() {
+
     this.listenTo(this.collection, 'add', this.addOne);
-    this.listenTo(this.collection, 'change sync reset', this.render)
+    this.listenTo(this.collection, 'change sync reset', this.render);
     this.render();
+  },
+
+  render: function() {
+    var container = document.querySelector('#container');
+    // initialize Masonry after all images have loaded
+    imagesLoaded( container, function() {
+      masonry = new Masonry(container, {
+        // "columnWidth":280,
+        "itemSelector":'.item',
+        "isFitWidth":true
+      });
+    });
   },
 
   addOne: function(item) {

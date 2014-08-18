@@ -14,32 +14,30 @@
 //= require jquery_ujs
 //= require underscore
 //= require backbone
+//= require imagesloaded
 //= require masonry
 //= require_tree .
 
-var msnry = new Masonry( "#container", {
-  // options
-  // "columnWidth":1,
-  "isFitWidth":true,
-  "itemSelector": '.item'
-});
-
-
+// clicking on item will trigger link to open in new window
 $(".item").on("click", function(){
    window.open($(this).find("a").attr("href"));
    return false;
 });
 
+
+// clicking on X will hide chrome extension reminder
 $(".hide").on("click", function() {
   $("#extension").addClass("visuallyhidden");
 });
 
-// $(".public").on("click", function() {
-//   $(".private").toggleClass("visuallyhidden");
-//   $(".public").toggleClass("visuallyhidden");
-// });
 
-// $(".private").on("click",function() {
-//   $(".private").toggleClass("visuallyhidden");
-//   $(".public").toggleClass("visuallyhidden");
-// });
+//masonry for shared page
+var container = document.querySelector('#shared-container');
+imagesLoaded( container, function() {
+  masonry = new Masonry(container, {
+    // "columnWidth":280,
+    "itemSelector":'.item-wrapper',
+    "isFitWidth":true
+  });
+});
+

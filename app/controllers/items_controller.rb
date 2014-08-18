@@ -33,13 +33,22 @@ class ItemsController < ApplicationController
 
   def share
     @owner = User.where(uid: params[:user_uid])[0]
-    @items = Item.where(user_id: @owner.id)
+    @items = Item.where(user_id: @owner.id, is_private?: false)
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    if @item.update(item_params)
+      render json: @item.to_json
+    else
+      render json: @item.errors, status: :unprocessable_entity
+    end
   end
 
   private
 
     def item_params
-      params.require(:item).permit(:image_url, :title, :url, :timestamps)
+      params.require(:item).permit(:image_url, :title, :url, :timestamps, :is_private?)
     end
 
 end

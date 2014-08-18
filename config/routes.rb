@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
 
   root "items#index"
-  resources :items, only: [:index, :create, :destroy]
+  resources :items, only: [:index, :create, :destroy, :update]
   get "/:user_uid", to: "items#share"
 
 end
