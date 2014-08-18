@@ -29,15 +29,3 @@ $(".item").on("click", function(){
 $(".hide").on("click", function() {
   $("#extension").addClass("visuallyhidden");
 });
-
-
-//masonry for shared page
-var container = document.querySelector('#shared-container');
-imagesLoaded( container, function() {
-  masonry = new Masonry(container, {
-    // "columnWidth":280,
-    "itemSelector":'.item-wrapper',
-    "isFitWidth":true
-  });
-});
-

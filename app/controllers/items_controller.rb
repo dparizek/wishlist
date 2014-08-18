@@ -34,7 +34,6 @@ class ItemsController < ApplicationController
   def share
     @owner = User.where(uid: params[:user_uid])[0]
     @items = Item.where(user_id: @owner.id, is_private?: false)
-    binding.pry
   end
 
   def update
