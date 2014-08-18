@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
       @items = []
     end
     respond_to do |format|
-      # format.html { render :index }
+      format.html { render :index }
       format.json { render json: @items }
     end
   end
