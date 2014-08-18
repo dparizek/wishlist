@@ -23,7 +23,7 @@ var ItemView = Backbone.View.extend({
   },
 
   togglePrivacy: function() {
-    this.model.set({'is_private?':!(this.model.get('is_private?'))});
+    this.model.save({'is_private?':!(this.model.get('is_private?'))});
     console.log(this.model.get('is_private?'));
     this.render();
   },
