@@ -26,7 +26,7 @@
   <div class="item-wrapper">
 
     <img src="<%%= item.get('image_url') %>" width="200px">
-    <span class="text-content"><span class="remove">&#x2715;</span><span><%% if(item.get('is_private?') === true) {%><img src="assets/lock.png" class="lock private"><%%} else {%> <img src="assets/unlock.png" class="lock"><%%}%></span><span class="title"><a href="<%%= item.get('url') %>" target=_blank><%%= item.get('title') %></a></span></span>
+    <span class="text-content"><span class="remove">&#x2715;</span><span><%% if(item.get('is_private?') === true) {%><img src="assets/lock.png" class="lock private"><%%} else {%> <img src="assets/unlock.png" class="lock"><%%}%></span><span class="title"><a href="<%%= item.get('url') %>" target=_blank><%%= item.get('title') %></a></span><span class="date">Wished for on <%%= item.get('created_at').substring(5,10).split("-").join("/") + "/" + item.get('created_at').substring(0,4) %></span></span>
   </div>
 </script>
 

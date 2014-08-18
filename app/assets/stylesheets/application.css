@@ -105,7 +105,6 @@ form input {
   border-radius: 5px;
   display: inline-block;
   padding: 3px;
-  position:relative;
 }
 
 .item-wrapper {
@@ -139,13 +138,13 @@ span.text-content {
   color: white;
   cursor: pointer;
   display: block;
-  height: 97%;
+  height: 100%;
   left: 0;
-  padding:5px;
+  padding:;
   position: absolute;
   top: 0;
   opacity: 0;
-  width: 97%;
+  width: 100%;
   -webkit-transition: opacity 500ms;
   -moz-transition: opacity 500ms;
   -o-transition: opacity 500ms;
@@ -170,8 +169,13 @@ span.text-content a:hover{
   text-decoration: underline;
 }
 
-.item:hover span.text-content {
+.item-wrapper:hover span.text-content {
   opacity: 1;
+}
+
+span.text-content .remove {
+  left:5px;
+  position: absolute;
 }
 
 span.text-content .date {

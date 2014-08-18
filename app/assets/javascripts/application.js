@@ -36,7 +36,7 @@ var container = document.querySelector('#shared-container');
 imagesLoaded( container, function() {
   masonry = new Masonry(container, {
     // "columnWidth":280,
-    "itemSelector":'.item-wrapper',
+    "itemSelector":'.item',
     "isFitWidth":true
   });
 });
