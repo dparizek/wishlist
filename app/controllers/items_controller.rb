@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_filter :allow_iframe_requests
 
   def index
     if current_user
@@ -49,6 +50,10 @@ class ItemsController < ApplicationController
 
     def item_params
       params.require(:item).permit(:image_url, :title, :url, :timestamps, :is_private?)
+    end
+
+    def allow_iframe_requests
+      response.headers.delete('X-Frame-Options')
     end
 
 end
