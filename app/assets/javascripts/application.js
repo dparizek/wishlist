@@ -34,6 +34,7 @@ $(".hide").on("click", function() {
 //masonry for shared page
 var container = document.querySelector('#shared-container');
 imagesLoaded( container, function() {
+  console.log('masonry firing')
   masonry = new Masonry(container, {
     // "columnWidth":280,
     "itemSelector":'.item',
